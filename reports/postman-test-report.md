@@ -184,7 +184,63 @@ pm.test("Price is greater than zero", function () {
     pm.expect(jsonData.price).to.be.above(0);
 });
 ```
+### Delete Product
 
+```javascript
+// Validate status code
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+// Validate response time
+pm.test("Response time is less than 2000 ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(2000);
+});
+
+// Parse response body
+const jsonData = pm.response.json();
+
+// Validate response body is not empty
+pm.test("Response body is not empty", function () {
+    pm.expect(jsonData).to.not.be.empty;
+});
+
+// Validate required fields
+pm.test("Response contains id", function () {
+    pm.expect(jsonData).to.have.property("id");
+});
+
+pm.test("Response contains title", function () {
+    pm.expect(jsonData).to.have.property("title");
+});
+
+pm.test("Response contains price", function () {
+    pm.expect(jsonData).to.have.property("price");
+});
+
+// Validate deleted product ID
+pm.test("Deleted product ID is 1", function () {
+    pm.expect(jsonData.id).to.eql(1);
+});
+
+// Validate data types
+pm.test("Product ID is a number", function () {
+    pm.expect(jsonData.id).to.be.a("number");
+});
+
+pm.test("Product title is a string", function () {
+    pm.expect(jsonData.title).to.be.a("string");
+});
+
+pm.test("Product price is a number", function () {
+    pm.expect(jsonData.price).to.be.a("number");
+});
+
+// Validate price is positive
+pm.test("Price is greater than zero", function () {
+    pm.expect(jsonData.price).to.be.above(0);
+});
+```
 ---
 
 # 📋 Conclusion
