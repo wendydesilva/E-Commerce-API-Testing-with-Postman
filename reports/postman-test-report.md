@@ -104,7 +104,28 @@ DELETE /products/1
 ---
 
 # 💻 Test Scripts Used
-## Get All Products
+### Get All Products
+```javascript
+// Validate status code
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+// Validate response time
+pm.test("Response time is less than 2000ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(2000);
+});
+
+// Validate response body fields
+pm.test("Response has required fields", function () {
+    const jsonData = pm.response.json();
+
+    pm.expect(jsonData).to.have.property("id");
+    pm.expect(jsonData).to.have.property("title");
+    pm.expect(jsonData).to.have.property("price");
+});
+```
+### Get All Products
 ```javascript
 // Validate status code
 pm.test("Status code is 200", function () {
