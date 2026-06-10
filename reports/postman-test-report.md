@@ -104,7 +104,7 @@ DELETE /products/1
 ---
 
 # 💻 Test Scripts Used
-
+## Get All Products
 ```javascript
 // Validate status code
 pm.test("Status code is 200", function () {
