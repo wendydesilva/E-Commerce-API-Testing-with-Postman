@@ -29,7 +29,7 @@
 ### Endpoint
 
 ```http
-GET /products?limit=5
+GET /products
 ```
 
 ### Expected Result
