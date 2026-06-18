@@ -107,7 +107,6 @@
       "response": []
     },
     {
-    {
   "name": "Delete Product",
   "request": {
     "method": "DELETE",
