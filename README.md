@@ -81,7 +81,7 @@ README.md
 
 ### Delete Product
 
-![Delete Product](screenshots/deleteProdct.png)
+![Delete Product](screenshots/deleteProduct.png)
 
 ---
 
