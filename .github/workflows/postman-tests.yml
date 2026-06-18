@@ -26,7 +26,7 @@ jobs:
 
     - name: Run Postman Collection
       run: |
-        newman run collection.json \
+        newman run collections/collection.json \
         -r cli,htmlextra \
         --reporter-htmlextra-export report.html
 
