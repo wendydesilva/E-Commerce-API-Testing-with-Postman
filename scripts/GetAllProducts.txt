@@ -1,0 +1,18 @@
+// Validate status code
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+//Validating response time is less than 2000ms.
+pm.test("Response time is less than 2000ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(2000);
+});
+
+//Validating response has required fields.
+pm.test("Response has required fields", function () {
+    const jsonData = pm.response.json();
+
+    pm.expect(jsonData).to.have.property("id");
+    pm.expect(jsonData).to.have.property("title");
+    pm.expect(jsonData).to.have.property("price");
+});
