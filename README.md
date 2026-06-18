@@ -73,15 +73,15 @@ README.md
 
 ### Get All Products
 
-![Get Products](screenshots/get-all-products.png)
+![Get Products](screenshots/getAllProducts.png)
 
 ### Get Single Product
 
-![Get Single Product](screenshots/get-single-product.png)
+![Get Single Product](screenshots/getSingleProduct.png)
 
 ### Delete Product
 
-![Delete Product](screenshots/delete-product.png)
+![Delete Product](screenshots/deleteProdct.png)
 
 ---
 
