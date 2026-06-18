@@ -7,13 +7,17 @@
   },
   "item": [
     {
-      "name": "Get All Products",
-      "request": {
-        "method": "GET",
-        "header": []
-      },
-      "response": []
-    },
+  "name": "Get All Products",
+  "request": {
+    "method": "GET",
+    "url": {
+      "raw": "https://fakestoreapi.com/products",
+      "protocol": "https",
+      "host": ["fakestoreapi", "com"],
+      "path": ["products"]
+    }
+  }
+},
     {
       "name": "Get Single Product",
       "event": [
@@ -103,12 +107,17 @@
       "response": []
     },
     {
-      "name": "Delete Product",
-      "request": {
-        "method": "GET",
-        "header": []
-      },
-      "response": []
+    {
+  "name": "Delete Product",
+  "request": {
+    "method": "DELETE",
+    "url": {
+      "raw": "https://fakestoreapi.com/products/1",
+      "protocol": "https",
+      "host": ["fakestoreapi", "com"],
+      "path": ["products", "1"]
     }
+  }
+}
   ]
 }
