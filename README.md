@@ -87,9 +87,6 @@ README.md
 
 ## Future Improvements
 
-- POST requests
-- PUT requests
-- PATCH requests
-- Authentication
+
 - Newman HTML reports
 - GitHub Actions CI/CD
