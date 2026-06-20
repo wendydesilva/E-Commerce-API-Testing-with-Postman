@@ -13,19 +13,23 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '24'          # ← was '20' (deprecated)
+        node-version: '24'
 
     - name: Install Newman
       run: |
         npm install -g newman
         npm install -g newman-reporter-htmlextra
 
+    - name: Fix API URLs
+      run: |
+        sed -i 's/fakestoreapi\.com/dummyjson.com/g' "collections/E-Commerce API.postman_collection.json"
+
     - name: Run Postman Collection
       run: |
         newman run "collections/E-Commerce API.postman_collection.json" \
         -r cli,htmlextra \
         --reporter-htmlextra-export report.html \
-        --timeout-request 10000     # ← 10s per request (avoids flaky timeouts)
+        --timeout-request 10000
 
     - name: Upload HTML Report
       uses: actions/upload-artifact@v4
